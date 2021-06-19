@@ -1,0 +1,12 @@
+.orgchart { 
+  background-image:none;
+  background: white; 
+}
+/* excluding leaf node */
+.orgchart .node:not(:only-child)::after {
+  height: 15px;
+}
+/* excluding root node */
+.orgchart > ul > li > ul li > .node::before {
+  height: 15px;
+}
